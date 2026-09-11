@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "factor-bt"
+version = "0.1.0"
+description = "Lightweight daily factor backtest (IC, quantile, long-short)"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["factor_bt*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
